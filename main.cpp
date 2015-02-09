@@ -1,12 +1,9 @@
-// add numbers
-// radnomize
-// scalable
-// add nose
-// ---  lines,dots,circle use ur imagination
-// distortion
-// option to hollow font 
+/*
 
+	Group 1
+	IITG
 
+*/
 
 #include <cstdio>
 #include <cstdlib>
@@ -31,6 +28,12 @@ for(i=0;i<1328;i++)
 		letters[j][0]=i+1;
 	}
 }
+}
+
+void addline(int x1,int y1, int x2, int y2,bitmap_image &image)
+{
+
+
 }
 
 int main()
@@ -60,7 +63,16 @@ for(unsigned int k=0; k<str.length(); ++k)
 	   }
 	   offset=offset+letters[str[k]-'a'][1]-letters[str[k]-'a'][0]-15;
 }
+	srand(time(NULL));
+	image_drawer draw(image);
+	for(x=0;x<20;x++)
+	{
+		
+   		draw.pen_width(1);
+   		draw.pen_color(rand()%255,rand()%255,rand()%255);
+   		draw.line_segment(rand()%180,rand()%52,rand()%180,rand()%52);
 
+     }
     image.save_image("myimg.bmp");
 
   return 0;
